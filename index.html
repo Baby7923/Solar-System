@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <script src="script/aframe.min.js"></script> 
+</head>
+<body>
+    <a-scene>
+    <!-- Background Stars -->
+    <a-sky src="texture/2k_stars_milky_way.jpg"></a-sky>
+
+    <!-- The Sun -->
+    <a-sphere id="sun" position="0 1.5 -5" radius="1.2" src="texture/2k_sun.jpg"></a-sphere>
+
+    <!-- Planets -->
+  <a-entity id="mercury" orbit="speed: 4; radius: 2">
+    <a-sphere radius="0.2" src="texture/2k_mercury.jpg"></a-sphere>
+</a-entity>
+
+<a-entity id="venus" orbit="speed: 3.5; radius: 3">
+    <a-sphere radius="0.35" src="texture/2k_venus_surface.jpg"></a-sphere>
+    <a-sphere radius="0.4" src="texture/2k_venus_atmosphere.jpg" material="transparent: true; opacity: 0.5"></a-sphere>
+</a-entity>
+
+<a-entity id="earth" orbit="speed: 3; radius: 4">
+    <a-sphere radius="0.4" src="texture/2k_earth_daymap.jpg"></a-sphere>
+</a-entity>
+
+<a-entity id="mars" orbit="speed: 2.5; radius: 6">
+    <a-sphere radius="0.3" src="texture/2k_mars.jpg"></a-sphere>
+</a-entity>
+
+<a-entity id="jupiter" orbit="speed: 1.5; radius: 9">
+    <a-sphere radius="0.8" src="texture/2k_jupiter.jpg"></a-sphere>
+</a-entity>
+
+<a-entity id="saturn" orbit="speed: 1; radius: 12">
+    <a-sphere radius="0.7" src="texture/2k_saturn.jpg"></a-sphere>
+
+    <!-- Saturn’s ring -->
+    <a-ring radius-inner="0.9" radius-outer="1.5" 
+    position="0 0 0"
+    rotation="90 0 0"
+    src="texture/2k_saturn_ring_alpha.png"
+    material="shader: flat; side: double; transparent: true; opacity: 1; color: white;">
+</a-ring>
+
+</a-entity>
+<a-entity id="uranus" orbit="speed: 0.7; radius: 15">
+    <a-sphere radius="0.6" src="texture/2k_uranus.jpg"></a-sphere>
+</a-entity>
+
+<a-entity id="neptune" orbit="speed: 0.5; radius: 18">
+    <a-sphere radius="0.55" src="texture/2k_neptune.jpg"></a-sphere>
+</a-entity>
+
+</a-scene>
+
+</body>
+</html>
